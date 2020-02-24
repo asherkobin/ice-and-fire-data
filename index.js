@@ -18,6 +18,13 @@ server.get("/", async (req, res) => {
   res.status(200).json("Hello World");
 })
 
+server.post("/sql", async (req, res) => {
+  const client = await pool.connect();
+  const result = await client.query(req.body);
+
+  res.status(200).json(result);
+});
+
 server.listen(portNum, () => {
   console.log("Express is Running on " + portNum);
 })
