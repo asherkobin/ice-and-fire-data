@@ -1,0 +1,24 @@
+{
+  "name": "ice-and-fire-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asherkobin/ice-and-fire-data.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asherkobin/ice-and-fire-data/issues"
+  },
+  "homepage": "https://github.com/asherkobin/ice-and-fire-data#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
