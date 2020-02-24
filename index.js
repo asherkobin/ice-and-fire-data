@@ -22,7 +22,7 @@ server.post("/sql", async (req, res) => {
   console.log("BODY:", req.body);
   
   const client = await pool.connect();
-  const result = await client.query(req.body);
+  const result = await client.query(req.body.query);
 
   client.release();
 
