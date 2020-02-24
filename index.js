@@ -13,14 +13,18 @@ server.get("/", async (req, res) => {
   const client = await pool.connect();
   const result = await client.query("SELECT 'Asher Kobin' AS Name");
 
-  console.log("DB Result:", result);
-
-  res.status(200).json("Hello World");
+  client.release();
+  
+  res.status(200).json(result);
 })
 
 server.post("/sql", async (req, res) => {
+  console.log("BODY:", req.body);
+  
   const client = await pool.connect();
   const result = await client.query(req.body);
+
+  client.release();
 
   res.status(200).json(result);
 });
